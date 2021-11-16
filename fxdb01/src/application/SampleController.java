@@ -37,7 +37,7 @@ public class SampleController {
 				txt_phone.setText(rs.getString("phone"));
 											
 			} else {
-				JOptionPane.showMessageDialog(null,"Try to another name ");
+				JOptionPane.showMessageDialog(null,"해당 학생 이름이 없음, 다시 입력하시오 ");
 			}
 			
 		} catch (SQLException e) {
@@ -45,6 +45,11 @@ public class SampleController {
 			e.printStackTrace();
 		}
 
+    }
+    
+    @FXML
+    void onClickStop(ActionEvent event) {
+    	System.exit(0);
     }
 
 }

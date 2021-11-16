@@ -13,19 +13,14 @@ public class SampleController {
 	ResultSet srs;
 	@FXML
 	private void initialize() {
+		conn = mysqlconnect.ConnectDb();
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-	//		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb?serverTimezone=UTC", "root","brd901as-kim");
-			conn = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/sampledb2?serverTimezone=UTC", "sukdongkim","brd901as-kim");
-			System.out.println("DB 연결 완료");
-			
+		
 			stmt = conn.createStatement();
     		srs = stmt.executeQuery("select * from student");
 
-		} catch (ClassNotFoundException e) {
-			System.out.println("JDBC 드라이버 로드 에러");
 		} catch (SQLException e) {
-			System.out.println("SQL 실행 에러");
+			System.out.println("SQL Error");
 		} 
 	}
     @FXML

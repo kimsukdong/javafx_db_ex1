@@ -17,11 +17,8 @@ public class SearchController {
 	ResultSet srs;
 	@FXML
 	private void initialize() {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb?serverTimezone=UTC", "root","brd901as-kim");
-			System.out.println("DB 연결 완료");
-			
+		conn = mysqlconnect.ConnectDb();
+		try {		
 			stmt = conn.createStatement(
 					ResultSet.TYPE_SCROLL_INSENSITIVE,
 				    ResultSet.CONCUR_UPDATABLE );
@@ -35,15 +32,11 @@ public class SearchController {
     			label1.setText("confirm");
     		}
 
-		} catch (ClassNotFoundException e) {
-			System.out.println("JDBC 드라이버 로드 에러");
-		} catch (SQLException e) {
+		}  catch (SQLException e) {
 			System.out.println("SQL 실행 에러");
 		} 
 	}
 	private void repeat() throws SQLException {
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb?serverTimezone=UTC", "root","brd901as-kim");
-	
 		stmt = conn.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE,
 			    ResultSet.CONCUR_UPDATABLE );
