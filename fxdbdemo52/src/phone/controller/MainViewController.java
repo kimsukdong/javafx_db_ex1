@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.control.Label;
 import phone.Main;
 
@@ -133,6 +134,8 @@ public class MainViewController {
 	void onClickgohome(ActionEvent event) {
 		try {
 			root = FXMLLoader.load(getClass().getResource("/phone/view/MainItem.fxml"));
+			Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\academy.jpg");
+			Main.primaryStage.getIcons().add(image);
 			Main.mainLayout.setCenter(root);
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -145,6 +148,8 @@ public class MainViewController {
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/MainItem.fxml"));
 				Main.mainLayout.setCenter(root);
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\academy.jpg");
+				Main.primaryStage.getIcons().add(image);
 				Main.setPrimaryStage("통합 관리");
 			} catch(Exception e) {
 				e.printStackTrace();

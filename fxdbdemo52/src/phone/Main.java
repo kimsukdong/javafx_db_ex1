@@ -6,13 +6,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-	private static Stage primaryStage;
+	public static Stage primaryStage;
 	public static Stage stage;
 	public static BorderPane mainLayout;
 	
@@ -31,8 +32,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Main.primaryStage = primaryStage;						
-			
+			Main.primaryStage = primaryStage;		
+			Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\academy.jpg");
+			Main.primaryStage.getIcons().add(image);
 			showMainView();		
 			showMainItems();
 			
@@ -48,6 +50,8 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("통합관리");
+			Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\academy.jpg");
+			Main.primaryStage.getIcons().add(image);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -73,6 +77,8 @@ public class Main extends Application {
 		stage.initModality(Modality.WINDOW_MODAL);
 		stage.initOwner(primaryStage);
 		Scene scene = new Scene(checkView);
+		Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\pizza.png");
+		stage.getIcons().add(image);
 		stage.setScene(scene);
 		stage.showAndWait();
 
@@ -88,6 +94,8 @@ public class Main extends Application {
 		stage.initModality(Modality.WINDOW_MODAL);
 		stage.initOwner(primaryStage);
 		Scene scene = new Scene(addNewEmployee);
+		Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\employment.jpg");
+		stage.getIcons().add(image);
 		stage.setScene(scene);
 		stage.showAndWait();
 	

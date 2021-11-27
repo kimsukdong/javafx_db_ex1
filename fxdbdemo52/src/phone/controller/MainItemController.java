@@ -17,6 +17,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Window;
@@ -215,6 +216,8 @@ public class MainItemController {
 		if(Main.login.equals("ON"))
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/CafeMain.fxml"));
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\coffee.jpg");
+				Main.primaryStage.getIcons().add(image);
 				Main.mainLayout.setCenter(root);
 				Main.setPrimaryStage("墨其 包府");
 			} catch(Exception e) {
@@ -232,7 +235,9 @@ public class MainItemController {
 		if(Main.login.equals("ON"))
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/AddressMain.fxml"));
-				Main.mainLayout.setCenter(root);
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\address.jpg");
+				Main.primaryStage.getIcons().add(image);
+				Main.mainLayout.setCenter(root);				
 				Main.setPrimaryStage("林家废 包府");
 			} catch(Exception e) {
 				e.printStackTrace();
@@ -250,6 +255,8 @@ public class MainItemController {
 		if(Main.login.equals("ON"))
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/PizzaMain.fxml"));
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\pizza.png");
+				Main.primaryStage.getIcons().add(image);
 				Main.mainLayout.setCenter(root);
 				Main.setPrimaryStage("乔磊 包府");
 			} catch(Exception e) {
@@ -267,6 +274,8 @@ public class MainItemController {
 		if(Main.login.equals("ON"))
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/BusMain.fxml"));
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\bustop.jpg");
+				Main.primaryStage.getIcons().add(image);
 				Main.mainLayout.setCenter(root);
 				Main.setPrimaryStage("滚胶 抗距 包府");
 			} catch(Exception e) {
@@ -286,6 +295,8 @@ public class MainItemController {
 		if(Main.login.equals("ON"))
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/RestaurantMain.fxml"));
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\res.jpg");
+				Main.primaryStage.getIcons().add(image);
 				Main.mainLayout.setCenter(root);
 				Main.setPrimaryStage("侥寸 包府");
 			} catch(Exception e) {
@@ -311,6 +322,8 @@ public class MainItemController {
 		if(Main.login.equals("ON"))
 			try {
 				root = FXMLLoader.load(getClass().getResource("/phone/view/EmployeeMain.fxml"));
+				Image image = new Image("C:\\Users\\sdk10\\git\\javafx_db_ex2\\fxdbdemo52\\src\\images\\employment.jpg");
+				Main.primaryStage.getIcons().add(image);
 				Main.mainLayout.setCenter(root);
 				Main.setPrimaryStage("绊侩 包府");
 			} catch(Exception e) {
